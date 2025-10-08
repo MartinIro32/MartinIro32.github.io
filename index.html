@@ -1,12 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="sk">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tímová stránka projektu</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active"><a class="nav-link" href="index.html">O projekte</a></li>
+                <li class="nav-item"><a class="nav-link" href="stav.html">Stav projektu</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="zapisniceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Zápisnice
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="zapisniceDropdown">
+                        <li><a class="dropdown-item" href="zapisnice/zapisnica1.html">Zápisnica 1</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="bg-light text-center py-5 border-bottom">
+    <div class="container">
+        <h1 class="fw-bold display-5 mb-3">Tímový projekt</h1>
+        <p class="lead text-muted">Udržiavanie webovej aplikácie pre CSIRT</p>
+    </div>
+</header>
+
+<main class="container my-5">
+
+    <section class="mb-5">
+        <h2 class="mb-3 text-primary">Zadanie projektu</h2>
+        <p class="lead">
+            Úlohou tímového projektu je údržba webovej aplikácie pre organizáciu CSIRT FEI.
+            Webová aplikácia sa skladá z niekoľkých komponentov: interná stránka so správou úloh a systémom na riadenie incidentov, verejná stránka s informáciami a novinkami pre verejnosť a wiki pre interné návody a znalosti.
+            Použité technológie: Laravel, Directus, Bookstack, Astro, Vue.
+        </p>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="mb-3 text-primary">Úlohy projektu</h2>
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <ol class="mb-3">
+                    <li>Naštudujte architektúru existujúceho riešenia.</li>
+                    <li>Aktualizujte komponenty aplikácie na najnovšie verzie.</li>
+                    <li>Naštudujte dátový model aplikácie, vyhodnoťte jeho vhodnosť a optimálnosť,  navrhnite a implementujte zmeny.</li>
+                    <li>Vykonajte dôsledné používateľské testovanie aplikácie, navrhnite a  implementujte zmeny.</li>
+                    <li>Implementujte nedoriešené funkcionality podľa pôvodného návrhu a odporúčaní  predchádzajúceho tímového projektu.</li>
+                    <li>Priebežne vykonávajte webmastering verejnej stránky CSIRT.</li>
+                </ol>
+                <blockquote class="blockquote text-muted">
+                    <p class="mb-0"> Pozn.: Vyššie uvedené úlohy sú len orientačné. Konkrétne úlohy budú určené po konzultácii s tímom a podľa potrieb CSIRT-u v priebehu akademického roka.</p>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="mb-3 text-primary">Účastníci</h2>
+        <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">Ing. Roderik Ploszek, Phd.</h5>
+                    <p class="card-text text-muted">
+                        Zadávateľ projektu.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Bc. Tomáš Bunta</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Bc. Ondrej Belan</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Bc. Martin Iró</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Bc. Adam Varga</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Bc. Dominik Velič</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+        <h2 class="mb-3 text-primary">Dokumentácia</h2>
+        <p>Linky na zdrojové kódy a dokumentácie predošlých tímov</p>
+        <ul class="list-group list-group-flush shadow-sm">
+            <li class="list-group-item"><a href="https://gitlab.com/fei2781241/fei_csirt_web_app">Zdrojové kódy</a></li>
+            <li class="list-group-item"><a href="https://alpha.ploszek.com/sharing/SJPzdLE1W">Dokumentácie predchádzajúcich projektov</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer class="bg-primary text-white text-center py-3 mt-auto">
+    © 2025 | Aktualizované raz týždenne
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
