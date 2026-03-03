@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zápisnica 6</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html">O projekte</a></li>
+        <li class="nav-item"><a class="nav-link" href="../stav.html">Stav projektu</a></li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="zapisniceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Zápisnice
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="zapisniceDropdown">
+            <li><a class="dropdown-item" href="zapisnica1.html">Zápisnica 1</a></li>
+            <li><a class="dropdown-item" href="zapisnica2.html">Zápisnica 2</a></li>
+            <li><a class="dropdown-item" href="zapisnica3.html">Zápisnica 3</a></li>
+            <li><a class="dropdown-item" href="zapisnica4.html">Zápisnica 4</a></li>
+            <li><a class="dropdown-item" href="zapisnica5.html">Zápisnica 5</a></li>
+            <li><a class="dropdown-item active" href="zapisnica6.html">Zápisnica 6</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-light text-center py-5 border-bottom">
+  <div class="container">
+    <h1 class="fw-bold display-5 mb-3">Zápisnica 6 – 6. stretnutie tímu</h1>
+    <p class="lead text-muted">Udržiavanie webovej aplikácie pre CSIRT</p>
+  </div>
+</header>
+
+<main class="container my-5">
+  <section class="mb-5">
+    <div class="card border-0 shadow-sm mb-4">
+      <div class="card-body">
+        <h2 class="mb-3 text-primary">Dátum: 3. marca 2026</h2>
+
+        <p class="mb-2"><strong>Čas stretnutia:</strong> 12:15</p>
+        <p class="mb-2"><strong>Zápis vypracoval:</strong> Bc. Martin Iró</p>
+        <p class="mb-3"><strong>Účastníci:</strong><br>
+          Ing. Roderik Ploszek, Phd.<br>
+          Bc. Tomáš Bunta<br>
+          Bc. Ondrej Belan<br>
+          Bc. Martin Iró<br>
+          Bc. Adam Varga<br>
+          Bc. Dominik Velič
+        </p>
+
+        <h3 class="mb-3 text-secondary">Informácie zo stretnutia</h3>
+
+        <p>Prvé stretnutie v novom roku sa začalo o 12:15, kde sme prebrali aktuálny stav projektu.
+          Zamerali sme sa na situáciu pri pushovaní commitov do repozitára v systéme GitLab.
+          Pri commitoch nastala komplikácia, konkrétne s komponentom composer, ktorý spôsobil stav akéhokoľvek commitu "failed".
+          Následne sme identifikovali aj riešenie, ktoré bude potrebné vykonať na serveri.<br>
+
+          Ďalej sme sa venovali úloham zo SonarQube analýzy, ktoré boli už skôr pridelené a rozdelené členom tímu.
+          Išlo o security, maintainability a readability úlohy.<br>
+
+          Jednou z dôležitejších tém bola validácia e-mailových adries prostredníctvom regulárnych výrazov.
+          Diskusia sa sústredila na správny návrh regexu a na to, aby sa validácia neobmedzovala iba na konkrétnu univerzitnú doménu.
+          Rozoberali sme, ako správne navrhovať regex výrazy, prípadne či je vhodnejšie použiť existujúce knižnice namiesto vlastnej implementácie.
+          Zároveň sme diskutovali aj o možnosti nastaviť pevné limity na dĺžku e-mailu a kontrolovať povolené rozmedzie.<br>
+
+          Ako ďalšie sa zistilo, že viaceré komponenty bežia pod root používateľom, pričom momentálne nemáme dostatočný prehľad o tom, ktoré služby sú takto spúšťané a kde presne bežia.
+          Dojímame sa, že ide prevažne o Dockerfiles, ale bude potrebné ďalšie preverenie.<br>
+
+          Predposlednou témou bola CI/CD pipeline procesov. Objavili sa pochybnosti, či je súčasné riešenie správne navrhnuté.
+          Aktuálny proces spočíva v tom, že po vytvorení článku v systéme Directus sa zmeny odošlú do GitLab, kde sa vytvorí Docker image, ten sa nahrá a následne sťahuje na server, kde beží webová aplikácia.
+          Keďže väčšina týchto procesov beží na tom istom serveri, diskutovali sme o možnosti realizovať build proces lokálne, priamo serveri.
+          Dohodli sme sa, že je potrebné vypracovať štúdiu realizovateľnosti, t.j. preveriť, či je možné celý proces presunúť do lokálneho prostredia, aké úpravy by boli potrebné a do akej miery by to zasiahlo do existujúcej architektúry.<br>
+
+          Poslednou témou bola privátna časť aplikácie.
+          Rozoberali sme optimalizáciu databázy, spôsob pridávania incidentov a nastavenie workflow procesu, teda či je súčasný model efektívny a udržateľný.
+          Ide o dlhodobejší projekt, najmä v kontexte časti systému, kde sa incidenty nahlasujú a spracúvajú.
+
+          </p>
+
+        <h3 class="mb-3 text-secondary">Stanovenie úloh</h3>
+
+        <ol>
+          <li>
+            <p>Composer update na serveri.</p>
+          </li>
+          <li>
+            <p>Pokračovanie v riešení úloh zo SonarQube analýzy.</p>
+          </li>
+          <li>
+            <p>Dohodnúť sa na riešení validácie emailových adries.</p>
+          </li>
+          <li>
+            <p>Prešetriť, ktoré časťi aplikácie, ktoré komponenty bežia pod root používateľom.</p>
+          </li>
+          <li>
+            <p>Analyzovať CI/CD pipeline projektu.</p>
+          </li>
+          <li>
+            <p>Hlbší prieskum workflowu privátnej časti, prehľad databázy a pridávania incidentov.</p>
+          </li>
+        </ol>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="bg-primary text-white text-center py-3 mt-auto">
+  © 2025 | Aktualizované v priebehu týždna
+</footer>
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
