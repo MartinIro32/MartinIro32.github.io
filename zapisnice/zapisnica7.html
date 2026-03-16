@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zápisnica 2</title>
+  <title>Zápisnica 7</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/custom.css">
 </head>
@@ -27,12 +27,12 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="zapisniceDropdown">
             <li><a class="dropdown-item" href="zapisnica1.html">Zápisnica 1</a></li>
-            <li><a class="dropdown-item active" href="zapisnica2.html">Zápisnica 2</a></li>
+            <li><a class="dropdown-item" href="zapisnica2.html">Zápisnica 2</a></li>
             <li><a class="dropdown-item" href="zapisnica3.html">Zápisnica 3</a></li>
             <li><a class="dropdown-item" href="zapisnica4.html">Zápisnica 4</a></li>
-            <li><a class="dropdown-item " href="zapisnica5.html">Zápisnica 5</a></li>
+            <li><a class="dropdown-item" href="zapisnica5.html">Zápisnica 5</a></li>
             <li><a class="dropdown-item" href="zapisnica6.html">Zápisnica 6</a></li>
-            <li><a class="dropdown-item" href="zapisnica7.html">Zápisnica 7</a></li>
+            <li><a class="dropdown-item active" href="zapisnica7.html">Zápisnica 7</a></li>
           </ul>
         </li>
       </ul>
@@ -42,7 +42,7 @@
 
 <header class="bg-light text-center py-5 border-bottom">
   <div class="container">
-    <h1 class="fw-bold display-5 mb-3">Zápisnica 2 – 2. stretnutie tímu</h1>
+    <h1 class="fw-bold display-5 mb-3">Zápisnica 6 – 6. stretnutie tímu</h1>
     <p class="lead text-muted">Udržiavanie webovej aplikácie pre CSIRT</p>
   </div>
 </header>
@@ -51,13 +51,13 @@
   <section class="mb-5">
     <div class="card border-0 shadow-sm mb-4">
       <div class="card-body">
-        <h2 class="mb-3 text-primary">Dátum: 30. októbra 2025</h2>
+        <h2 class="mb-3 text-primary">Dátum: 10. marca 2026</h2>
 
         <p class="mb-2"><strong>Čas stretnutia:</strong> 12:00</p>
         <p class="mb-2"><strong>Zápis vypracoval:</strong> Bc. Martin Iró</p>
         <p class="mb-3"><strong>Účastníci:</strong><br>
           Ing. Roderik Ploszek, Phd.<br>
-          Bc. Tomáš Bunta (zdravotné problémy)<br>
+          Bc. Tomáš Bunta<br>
           Bc. Ondrej Belan<br>
           Bc. Martin Iró<br>
           Bc. Adam Varga<br>
@@ -66,34 +66,37 @@
 
         <h3 class="mb-3 text-secondary">Informácie zo stretnutia</h3>
 
-        <p>Stretnutie sa začalo o 12:00 prehľadom vyhodnotenia stanovených úloh, ktoré sme dostali počas predchádzajúceho stretnutia.
-          Išlo o analýzou komponentov systému, kde sme identifikovali ich aktuálne verzie a uvažovali, pre ktoré časti je nutný upgrade na novšiu verziu.
-          Vyhodnotili sme náročnosť upgrade-u komponentov systému - čo by sa muselo prerobiť, aký veľký vplyv by mal upgrade komponentu na systém.
-          Potom každý člen dostal link na Trello, v ktorom budeme zaznamenávať splnenie/nesplnenie vytvorených úloh.
-          Zaslaním SSH kľúčov Roderikovi sme dostali prístup na jeho privátny server.
-          Po diskusii k úlohám z minulého stretnutia sme sa postupne presunuli k plánovaniu nových úloh.
-          Prioritou bude upgrade jednotlivých komponentov. Taktiež analyzovať zdrojový kód cez SonarQube, kde sa identifikujú
-          nedostatky kvality kódu. S tejto analýzy sa následne stanovia ďalšie ciele a úlohy.
-          Na koniec sme sa dostali k otázke expirujúceho Docker tokenu, ktorého pôvod a účel je neznámy. Je potrebné preveriť, aký má účel a či jeho expirácia môže ovplyvniť fungovanie systému.
-          Ďalšie stretnutie bude o dva týžne.
+        <p>Stretnutie sa začalo o 12:00, kde sme prebrali aktuálny stav projektu.
+          Začali sme úspešným napravením problémov s CI/CD buildovaním projektu cez Gitlab.
+          Súčasne sa tým analyzovala CI/CD časť projektu, keďže pri composer update vznikli komplikácie, ktoré viedli k hlbšej analýze CI procesu.
+          Tieto komplikácie sa podarilo identifikovať a odstrániť.
+          <br>
+
+          Pokračovali sme v riešení svojich pridelených úloh z analýzy SonarQube.
+          Väčšina problémov už bola vyriešená a aktuálne zostávajú problémy nižšej priority.
+
+          Validácia e-mailových adries je aktuálne riešená obmedzením maximálnej dĺžky vstupnej e-mailovej adresy.
+          Na samotnú validáciu adries sme sa zatiaľ rozhodli ďalej používať doterajšiu knižnicu.
+
+          Diskutovali sme aj o úpravách pri vytváraní článkov v Directuse.
+          Na tomto riešení sa stále pracuje a jeho dokončenie sme si stanovili ako jeden z cieľov do nasledujúceho stretnutia.
+
+          Ako sme už minule spomínali, privátna časť aplikácie patrí do dlhodobých cieľov.
+          Preto analýza a návrh vylepšení naďalej pokračuje.
+
           </p>
 
         <h3 class="mb-3 text-secondary">Stanovenie úloh</h3>
 
         <ol>
           <li>
-            <p>Upgrade verzií jednotlivých komponentov :</p>
-            <ul>
-              <li><p>Laravel</p></li>
-              <li><p>PostgreSQL</p></li>
-              <li><p>Directus</p></li>
-            </ul>
+            <p>Pokračovať v analýze privátnej časti aplikácie.</p>
           </li>
           <li>
-            <p>Zistiť informácie o expirujúcom Docker tokenu (pôvod, účel, aký následok bude mať jeho expirácia...).</p>
+            <p>Pokračovať v riešení zostávajúcich úloh zo SonarQube analýzy.</p>
           </li>
           <li>
-            <p>Analýza zdrojového kódu cez SonarQube, ktorý odhalí nedostatky kvality kódu.</p>
+            <p>Preveriť a ošetriť možnosť generovania statických stránok priamo na serveri pri pridávaní článkov cez systém Directus.</p>
           </li>
         </ol>
 
