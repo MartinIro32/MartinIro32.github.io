@@ -72,15 +72,20 @@
         <p>Stretnutie sa začalo o 12:35. Z dôvodu odovzdávania zadaní na ADS bolo stretnutie kratšie a niektorí členovia tímu sa ho nemohli zúčastniť.
           Na úvod sme prešli problém s PHP verziami, kde v súbore composer.json bola uvedená verzia php8.5, ale Docker kontajner stále používa verziu php8.2.
           Nastavili sme si ako dlhodobý cieľ aktualizovať tento Docker kontajner na novú verziu php8.5.<br>
-          Ako ďalšie sme sa pozreli na riešenie workflow-u incidentu a uviedli niektoré krajné prípady, ktoré bude potrebné ošetriť.
+          Ďalej sme sa pozreli na riešenie workflow-u incidentu a uviedli niektoré krajné prípady, ktoré bude potrebné ošetriť.
           V rámci implementačných úloh sa podarilo upraviť light/dark mód aplikácie (plán je ho upraviť podľa prostredia Gitlabu),
           doplniť autocomplete pri zadávaní mien pri incidente, umožniť zadanie tagu a popisu pri vytváraní úlohy, premenovať textové komponenty a umožniť zrušenie schválenia incidentu.<br>
           Ako nový cieľ sme si stanovili umožniť vytváranie tagov priamo pri zadávaní úlohy.<br>
-          Nepodarilo sa implementovať modál pri uzatváraní úlohy. Boli testované rôzne prístupy (custom modál aj dialog component), avšak bez funkčného výsledku.
+          Nepodarilo sa implementovať modál pri uzatváraní úlohy. Boli testované rôzne prístupy (custom modál aj dialog component), avšak bez funkčného výsledku.<br>
+          Na záver sme prebrali aj deploy-dev pipeline v prostredí Gitlab, ktorý nešiel spustiť s dôvodu zamietnutia pripojenia SSH na server a nenájdením image-u v Gitlab registry.
+          Máme tušenie, že problém bude s docker tokenom, ktorý riadi práve toto pripojenie.
         <h3 class="mb-3 text-secondary">Stanovenie úloh</h3>
         <ol>
           <li>
             <p>Aktualizovať PHP verziu v Docker kontajneri.</p>
+          </li>
+          <li>
+            <p>Opraviť deploy-dev pipeline.</p>
           </li>
           <li>
             <p>Vytváranie tagu priamo pri vytváraní úlohy.</p>
