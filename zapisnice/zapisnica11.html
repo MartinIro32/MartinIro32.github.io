@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zápisnica 8</title>
+  <title>Zápisnica 11</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/custom.css">
 </head>
@@ -33,10 +33,11 @@
             <li><a class="dropdown-item" href="zapisnica5.html">Zápisnica 5</a></li>
             <li><a class="dropdown-item" href="zapisnica6.html">Zápisnica 6</a></li>
             <li><a class="dropdown-item" href="zapisnica7.html">Zápisnica 7</a></li>
-            <li><a class="dropdown-item active" href="zapisnica8.html">Zápisnica 8</a></li>
+            <li><a class="dropdown-item" href="zapisnica8.html">Zápisnica 8</a></li>
             <li><a class="dropdown-item" href="zapisnica9.html">Zápisnica 9</a></li>
             <li><a class="dropdown-item" href="zapisnica10.html">Zápisnica 10</a></li>
-            <li><a class="dropdown-item" href="zapisnica11.html">Zápisnica 11</a></li>
+            <li><a class="dropdown-item active" href="zapisnica11.html">Zápisnica 11</a></li>
+
           </ul>
         </li>
       </ul>
@@ -46,7 +47,7 @@
 
 <header class="bg-light text-center py-5 border-bottom">
   <div class="container">
-    <h1 class="fw-bold display-5 mb-3">Zápisnica 8 – 8. stretnutie tímu</h1>
+    <h1 class="fw-bold display-5 mb-3">Zápisnica 11 – 11. stretnutie tímu</h1>
     <p class="lead text-muted">Udržiavanie webovej aplikácie pre CSIRT</p>
   </div>
 </header>
@@ -55,75 +56,41 @@
   <section class="mb-5">
     <div class="card border-0 shadow-sm mb-4">
       <div class="card-body">
-        <h2 class="mb-3 text-primary">Dátum: 17. marca 2026</h2>
+        <h2 class="mb-3 text-primary">Dátum: 31. marca 2026</h2>
 
         <p class="mb-2"><strong>Čas stretnutia:</strong> 12:00</p>
         <p class="mb-2"><strong>Zápis vypracoval:</strong> Bc. Martin Iró</p>
         <p class="mb-3"><strong>Účastníci:</strong><br>
           Ing. Roderik Ploszek, Phd.<br>
-          Bc. Tomáš Bunta<br>
-          Bc. Ondrej Belan<br>
           Bc. Martin Iró<br>
-          Bc. Adam Varga (neprítomný, zdravotné dôvody)<br>
-          Bc. Dominik Velič
+          Bc. Tomáš Bunta (neprítomný - zmena vlakového spojenia)<br>
+          Bc. Ondrej Belan <br>
+          Bc. Adam Varga <br>
+          Bc. Dominik Velič (neprítomný - zdravotné dôvody)
         </p>
 
         <h3 class="mb-3 text-secondary">Informácie zo stretnutia</h3>
 
-        <p>Stretnutie sa začalo o 12:00, kde sme prebrali aktuálny stav projektu. Začali sme tým, že väčšina členov tímu už doriešila svoje SonarQube úlohy.
-          Zostáva už len ich synchronizácia, aby sme ich mohli spojiť a spoločne pushnúť do main vetvy.<br>
-          Nakoniec po synchronizácii by sme mohli spraviť push zmien na produkčný server.<br>
-
-          Čo sa týka pridávania článkov v Directuse, prišli sme na to, že ktuálny prístup je správny a zodpovedá best practices.
-          Nie je potrebné meniť buildovanie stránok na lokálne generovanie, ale ponechať ho cez GitLab CI.
-          Diskutovali sme možnosť pridania Git Workera, ktorý by riešil plánovanie, spúšťanie a CI časť procesov, keďže aktuálne sa stále, napr. na pripojenie na produkčný server, využíva SSH kľúč bývalého člena predošlého tímu.
-          <br>
-
-          Ako ďalšie sme sa venovali privátnej časti aplikácie, kde sme si prešli konkrétne zmeny, ktoré treba implementovať.
-          Patria sem zmeny ako náprava light/dark módu, upravenie autocomplete pri dopĺňaní mien schvaľujúceho incidentu,
-          responzivita privátnej časti, pri uzatvorení ticketu incidentu pridať modál, pridať zrušenie schválenia incidentu a vhodne premenovať textové komponenty aplikácie.
-
-          Na záver sme sa venovali intuitívnosti pridávania, riešenia nahláseného incidentu. Workflow incidentu nie je dostatočne intuitívny, čiže je potrebné
-          prísť s vhodnejším riešením.
-          </p>
-
+        <p>Stretnutie sa začalo o 12:00. Na začiatku sme prediskutovali úlohy z privátnej čast, konkrétne funkcionalitu vytvárania tagov pri vytváraní a editovaní úloh a aj menšie úpravy ako je
+         pridanie tlačidla naspäť v časti aplikácie pre incidenty a úlohy, mazanie úloh, archivovanie incidentov.
+         Hlavnou témou bolo deployovanie a nastavenie Gitlab workera. Riešili sme spôsob pripájania sa a pushovania zmien z prostredia Gitlabu na testovací a produkčný server.
+         Aktuálna implementácia používa natvrdo definované heslá a sudo oprávnenia, čo prináša riziko z hľadiska bezpečnosti.
+          Navrhli sa zmeny ako odstránenie používania hesiel a pripájanie sa pomocou SSH kľúčov a SSH jump na produkčný server.
+          Týmto sa vyhneme root povoleniam pre používateľa (docker skupina). Medzi návrhý patrí aj obmedzenie sudo príkazov nutných pre nasadenie.
+          Na záver sme sa venovali téme verziovania Docker image-ov. V projekte sa používajú latest verzie, ktorým sa chceme vyhnúť kvôli možným nezrovnalostiam image-ov.
+          Navrhované riešenie pozostáva z priraďovania unikátnych hashov pre každý build, ktorý sa nasadí ako konkrétna verzia namiesto latest.
         <h3 class="mb-3 text-secondary">Stanovenie úloh</h3>
-
         <ol>
           <li>
-            <p>Synchronizácia členov tímu a následne push na produkčný server.</p>
+            <p>Pridať tlačidlo "Naspäť" do všetkých časti aplikácie.</p>
           </li>
           <li>
-            <p>Git Worker na riešenie CI časti procesov.</p>
+            <p>Implementácia návrhu pre pripájanie sa na produkčný server.</p>
           </li>
           <li>
-            <p>Úlohy týkajúce sa privátnej časti aplikácie:</p>
-            <ul>
-              <li>
-                <p>Prísť s intuitívnejším riešením workflow-u incidentu.</p>
-              </li>
-              <li>
-                <p>Napraviť light/dark mód.</p>
-              </li>
-              <li>
-                <p>Pridať autocomplete pri dopĺňaní mien.</p>
-              </li>
-              <li>
-                <p>Responzivita.</p>
-              </li>
-              <li>
-                <p>Modál pri uzatvorení ticketu incidentu.</p>
-              </li>
-              <li>
-                <p>Zrušenie schválenia incidentu.</p>
-              </li>
-              <li>
-                <p>Vhodne premenovať textové komponenty.</p>
-              </li>
-            </ul>
+            <p>Implementácia návrhu verziovania Docker image-ov.</p>
           </li>
         </ol>
-
       </div>
     </div>
   </section>
