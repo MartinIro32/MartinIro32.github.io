@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zápisnica 10</title>
+  <title>Zápisnica 11</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/custom.css">
 </head>
@@ -35,9 +35,10 @@
             <li><a class="dropdown-item" href="zapisnica7.html">Zápisnica 7</a></li>
             <li><a class="dropdown-item" href="zapisnica8.html">Zápisnica 8</a></li>
             <li><a class="dropdown-item" href="zapisnica9.html">Zápisnica 9</a></li>
-            <li><a class="dropdown-item active" href="zapisnica10.html">Zápisnica 10</a></li>
+            <li><a class="dropdown-item" href="zapisnica10.html">Zápisnica 10</a></li>
             <li><a class="dropdown-item" href="zapisnica11.html">Zápisnica 11</a></li>
-            <li><a class="dropdown-item" href="zapisnica12.html">Zápisnica 12</a></li>
+            <li><a class="dropdown-item active" href="zapisnica12.html">Zápisnica 12</a></li>
+
           </ul>
         </li>
       </ul>
@@ -47,7 +48,7 @@
 
 <header class="bg-light text-center py-5 border-bottom">
   <div class="container">
-    <h1 class="fw-bold display-5 mb-3">Zápisnica 10 – 10. stretnutie tímu</h1>
+    <h1 class="fw-bold display-5 mb-3">Zápisnica 12 – 12. stretnutie tímu</h1>
     <p class="lead text-muted">Udržiavanie webovej aplikácie pre CSIRT</p>
   </div>
 </header>
@@ -56,44 +57,43 @@
   <section class="mb-5">
     <div class="card border-0 shadow-sm mb-4">
       <div class="card-body">
-        <h2 class="mb-3 text-primary">Dátum: 31. marca 2026</h2>
+        <h2 class="mb-3 text-primary">Dátum: 28. apríla 2026</h2>
 
-        <p class="mb-2"><strong>Čas stretnutia:</strong> 12:35</p>
-        <p class="mb-2"><strong>Zápis vypracoval:</strong> Bc. Martin Iró</p>
+        <p class="mb-2"><strong>Čas stretnutia:</strong> 12:25</p>
+        <p class="mb-2"><strong>Zápis vypracoval:</strong> Bc. Ondrej Belan</p>
         <p class="mb-3"><strong>Účastníci:</strong><br>
           Ing. Roderik Ploszek, Phd.<br>
           Bc. Martin Iró<br>
-          Bc. Tomáš Bunta (neprítomný - odovzdávanie zadania, práca)<br>
-          Bc. Ondrej Belan (neprítomný - odovzdávanie zadania)<br>
-          Bc. Adam Varga (neprítomný - práca)<br>
-          Bc. Dominik Velič (neprítomný - odovzdávanie zadania)
+          Bc. Tomáš Bunta <br>
+          Bc. Ondrej Belan <br>
+          Bc. Adam Varga <br>
+          Bc. Dominik Velič
         </p>
 
         <h3 class="mb-3 text-secondary">Informácie zo stretnutia</h3>
 
-        <p>Stretnutie sa začalo o 12:35. Z dôvodu odovzdávania zadaní na ADS bolo stretnutie kratšie a niektorí členovia tímu sa ho nemohli zúčastniť.
-          Na úvod sme prešli problém s PHP verziami, kde v súbore composer.json bola uvedená verzia php8.5, ale Docker kontajner stále používa verziu php8.2.
-          Nastavili sme si ako dlhodobý cieľ aktualizovať tento Docker kontajner na novú verziu php8.5.<br>
-          Ďalej sme sa pozreli na riešenie workflow-u incidentu a uviedli niektoré krajné prípady, ktoré bude potrebné ošetriť.
-          V rámci implementačných úloh sa podarilo upraviť light/dark mód aplikácie (plán je ho upraviť podľa prostredia Gitlabu),
-          doplniť autocomplete pri zadávaní mien pri incidente, umožniť zadanie tagu a popisu pri vytváraní úlohy, premenovať textové komponenty a umožniť zrušenie schválenia incidentu.<br>
-          Ako nový cieľ sme si stanovili umožniť vytváranie tagov priamo pri zadávaní úlohy.<br>
-          Nepodarilo sa implementovať modál pri uzatváraní úlohy. Boli testované rôzne prístupy (custom modál aj dialog component), avšak bez funkčného výsledku.<br>
-          Na záver sme prebrali aj deploy-dev pipeline v prostredí Gitlab, ktorý nešiel spustiť s dôvodu zamietnutia pripojenia SSH na server a nenájdením image-u v Gitlab registry.
-          Máme tušenie, že problém bude s docker tokenom, ktorý riadi práve toto pripojenie.
+        <p>Stretnutie sa začalo o 12:25. Otvorili sme ho diskusiou k navrhnutým úlohám na minulom stretnutí,
+          konktrétne pripájanie sa na produkčný server a verziovanie Docker image-ov.
+          Počas diskusie sme si dojasnili detaily a dohodli sme sa, že by sme mohli spraviť
+          Trivy scan projektu a identifikáciu zraniteľností. Taktiež sme diskutovali o komponentoch
+          projektu, ktoré používajú latest balíky v súvislosti so zastropovaním verzií kvôli supply chain útokom.
+          Ďalšou témou bolo pridanie a imlementácia checkboxov pri vytváraní incidentov s cieľom zlepšiť workflow a spraviť ho intuitívnejším.
+          Pridal sa test do frontend časti aplikácie, ktorý overuje, či sa komponenty správne zostavujú vo Vite.
+          Na záver sme si zhrnuli chronologicky postup prác, úlohy na ďalšie strtetnutie a spisovanie dokumentácie.
+
         <h3 class="mb-3 text-secondary">Stanovenie úloh</h3>
         <ol>
           <li>
-            <p>Aktualizovať PHP verziu v Docker kontajneri.</p>
+            <p>Dokončiť úlohy týkajúce sa frontend-u zapísané v Trello (ak ešte ostali).</p>
           </li>
           <li>
-            <p>Opraviť deploy-dev pipeline.</p>
+            <p>Overiť ich funkcionalitu.</p>
           </li>
           <li>
-            <p>Vytváranie tagu priamo pri vytváraní úlohy.</p>
+            <p>Mergnúť zmeny na GitLabe.</p>
           </li>
           <li>
-            <p>Dokončiť zostávajúce úlohy z privátnej časti.</p>
+            <p>Pushnúť zmeny na testovací server.</p>
           </li>
         </ol>
       </div>
