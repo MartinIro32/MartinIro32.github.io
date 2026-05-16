@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zápisnica 5</title>
+  <title>Zápisnica 14</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/custom.css">
 </head>
@@ -30,7 +30,7 @@
             <li><a class="dropdown-item" href="zapisnica2.html">Zápisnica 2</a></li>
             <li><a class="dropdown-item" href="zapisnica3.html">Zápisnica 3</a></li>
             <li><a class="dropdown-item" href="zapisnica4.html">Zápisnica 4</a></li>
-            <li><a class="dropdown-item active" href="zapisnica5.html">Zápisnica 5</a></li>
+            <li><a class="dropdown-item" href="zapisnica5.html">Zápisnica 5</a></li>
             <li><a class="dropdown-item" href="zapisnica6.html">Zápisnica 6</a></li>
             <li><a class="dropdown-item" href="zapisnica7.html">Zápisnica 7</a></li>
             <li><a class="dropdown-item" href="zapisnica8.html">Zápisnica 8</a></li>
@@ -39,7 +39,7 @@
             <li><a class="dropdown-item" href="zapisnica11.html">Zápisnica 11</a></li>
             <li><a class="dropdown-item" href="zapisnica12.html">Zápisnica 12</a></li>
             <li><a class="dropdown-item" href="zapisnica13.html">Zápisnica 13</a></li>
-            <li><a class="dropdown-item" href="zapisnica14.html">Zápisnica 14</a></li>
+            <li><a class="dropdown-item active" href="zapisnica13.html">Zápisnica 14</a></li>
           </ul>
         </li>
       </ul>
@@ -49,7 +49,7 @@
 
 <header class="bg-light text-center py-5 border-bottom">
   <div class="container">
-    <h1 class="fw-bold display-5 mb-3">Zápisnica 5 – 5. stretnutie tímu</h1>
+    <h1 class="fw-bold display-5 mb-3">Zápisnica 14 – 14. stretnutie tímu</h1>
     <p class="lead text-muted">Udržiavanie webovej aplikácie pre CSIRT</p>
   </div>
 </header>
@@ -58,52 +58,42 @@
   <section class="mb-5">
     <div class="card border-0 shadow-sm mb-4">
       <div class="card-body">
-        <h2 class="mb-3 text-primary">Dátum: 11. decembra 2025</h2>
+        <h2 class="mb-3 text-primary">Dátum: 12. mája 2026</h2>
 
         <p class="mb-2"><strong>Čas stretnutia:</strong> 12:00</p>
         <p class="mb-2"><strong>Zápis vypracoval:</strong> Bc. Martin Iró</p>
         <p class="mb-3"><strong>Účastníci:</strong><br>
           Ing. Roderik Ploszek, Phd.<br>
-          Bc. Tomáš Bunta (neprítomný) <br>
-          Bc. Ondrej Belan<br>
           Bc. Martin Iró<br>
-          Bc. Adam Varga<br>
+          Bc. Tomáš Bunta <br>
+          Bc. Ondrej Belan <br>
+          Bc. Adam Varga <br>
           Bc. Dominik Velič
         </p>
 
         <h3 class="mb-3 text-secondary">Informácie zo stretnutia</h3>
 
-        <p>Stretnutie sa začalo o 12:00, kde každý člen tímu prezentoval výsledky práce na projekte.
-
-          Začali sme diskutovať o procese migrácie a obnový dát databázy PostgreSQL, ktorý bol úspešný.
-          Avšak objavili sa isté komplikácie súvisiace s pripojením databázy k backendovej časti aplikácie.
-          Problém bol nesprávna konfigurácia Dockerfile súborov, ktorých úprava viedla k odstráneniu tejto komplikácie.
-          Zároveň sa nám tým podarilo odstrániť nežiadúce chybové hlásenie backendu v Laravel časti aplikácie.
-          V priebehu riešenia spomínaného chybového hlásenia sme prišli na to, že na backend časti Laravel loguje
-          veľa záznamov, ktoré zaberajú miesto na serveri a bolo by dobre zistiť ako sa ukladajú.
-          V ďalšej časti stretnutia sme preberali rozdelenie úloh pomocou Sonarqube analýzy, na ktorých následne budeme pracovať.
-          Hlavným cieľom do nasledujúceho stretnutia, ktoré sa uskutoční podľa dohody v novom roku, je vypracovanie
-          dokumentácie kódu ako aj príprava dokumentácie v prostredí LaTeX.
-
-          </p>
-
+        <p>
+          Stretnutie sa začalo o 12:00. Hlavnou témou nášho stretnutia bolo riešenie problémov, ktoré vznikli počas nasadzovania
+          aplikácie na produkčný server s novo implementovanými zmenami.
+          Po nasadení zmien sa totiž aplikácia stala nefunkčnou a bolo nutné vykonať manuálne obnovenie jej predchádzajúcej verie.
+          Obnovenie zo zálohy sa podarilo, ale objavili sa ďalšie problémy. Kompilácia článkov vytvorených v Directuse sa nezobrazovali v sekcii blogov.
+          Samotné dáta o článkoch sa nachádzali v databáze, problém pravdepodobne súvisí s webhookmi a procesom generovania obsahu.
+          Directus sa stal nedostupným, nepodarilo sa ho otvoriť ani používať v rámci aplikácie.
+          Cieľom do ďalšieho stretnutia je obnoviť funkcionalitu aplikácie na produkčnom serveri s novými zmenami,
+          obnoviť zobrazovanie článkov vytvorených v Directuse a spojazdniť Directus.
         <h3 class="mb-3 text-secondary">Stanovenie úloh</h3>
-
         <ol>
           <li>
-            <p>Dokumentácia v LaTeX.</p>
+            <p>Obnoviť funkcionalitu aplikácie na produkčnom serveri.</p>
           </li>
           <li>
-            <p>Dokumentácia kódu.</p>
+            <p>Obnoviť zobrazovanie článkov.</p>
           </li>
           <li>
-            <p>Riešiť pridelené úlohy pomocou SonarQube analýzy.</p>
-          </li>
-          <li>
-            <p>Analýza logovania Laravel časti aplikácie.</p>
+            <p>Spojazdniť systém Directus.</p>
           </li>
         </ol>
-
       </div>
     </div>
   </section>
