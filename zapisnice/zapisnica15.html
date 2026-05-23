@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zápisnica 2</title>
+  <title>Zápisnica 15</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/custom.css">
 </head>
@@ -27,10 +27,10 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="zapisniceDropdown">
             <li><a class="dropdown-item" href="zapisnica1.html">Zápisnica 1</a></li>
-            <li><a class="dropdown-item active" href="zapisnica2.html">Zápisnica 2</a></li>
+            <li><a class="dropdown-item" href="zapisnica2.html">Zápisnica 2</a></li>
             <li><a class="dropdown-item" href="zapisnica3.html">Zápisnica 3</a></li>
             <li><a class="dropdown-item" href="zapisnica4.html">Zápisnica 4</a></li>
-            <li><a class="dropdown-item " href="zapisnica5.html">Zápisnica 5</a></li>
+            <li><a class="dropdown-item" href="zapisnica5.html">Zápisnica 5</a></li>
             <li><a class="dropdown-item" href="zapisnica6.html">Zápisnica 6</a></li>
             <li><a class="dropdown-item" href="zapisnica7.html">Zápisnica 7</a></li>
             <li><a class="dropdown-item" href="zapisnica8.html">Zápisnica 8</a></li>
@@ -40,7 +40,7 @@
             <li><a class="dropdown-item" href="zapisnica12.html">Zápisnica 12</a></li>
             <li><a class="dropdown-item" href="zapisnica13.html">Zápisnica 13</a></li>
             <li><a class="dropdown-item" href="zapisnica14.html">Zápisnica 14</a></li>
-            <li><a class="dropdown-item" href="zapisnica15.html">Zápisnica 15</a></li>
+            <li><a class="dropdown-item active" href="zapisnica15.html">Zápisnica 15</a></li>
           </ul>
         </li>
       </ul>
@@ -50,7 +50,7 @@
 
 <header class="bg-light text-center py-5 border-bottom">
   <div class="container">
-    <h1 class="fw-bold display-5 mb-3">Zápisnica 2 – 2. stretnutie tímu</h1>
+    <h1 class="fw-bold display-5 mb-3">Zápisnica 15 – 15. stretnutie tímu</h1>
     <p class="lead text-muted">Udržiavanie webovej aplikácie pre CSIRT</p>
   </div>
 </header>
@@ -59,52 +59,40 @@
   <section class="mb-5">
     <div class="card border-0 shadow-sm mb-4">
       <div class="card-body">
-        <h2 class="mb-3 text-primary">Dátum: 30. októbra 2025</h2>
+        <h2 class="mb-3 text-primary">Dátum: 20. mája 2026</h2>
 
-        <p class="mb-2"><strong>Čas stretnutia:</strong> 12:00</p>
+        <p class="mb-2"><strong>Čas online stretnutia:</strong> 9:10</p>
         <p class="mb-2"><strong>Zápis vypracoval:</strong> Bc. Martin Iró</p>
         <p class="mb-3"><strong>Účastníci:</strong><br>
           Ing. Roderik Ploszek, Phd.<br>
-          Bc. Tomáš Bunta (neprítomný - zdravotné problémy)<br>
-          Bc. Ondrej Belan<br>
           Bc. Martin Iró<br>
-          Bc. Adam Varga<br>
+          Bc. Tomáš Bunta <br>
+          Bc. Ondrej Belan <br>
+          Bc. Adam Varga <br>
           Bc. Dominik Velič
         </p>
 
         <h3 class="mb-3 text-secondary">Informácie zo stretnutia</h3>
 
-        <p>Stretnutie sa začalo o 12:00 prehľadom vyhodnotenia stanovených úloh, ktoré sme dostali počas predchádzajúceho stretnutia.
-          Predmetom diskusie bola analýza komponentov systému, kde sme identifikovali ich aktuálne verzie a uvažovali, pre ktoré časti je nutný prechod na novšiu verziu.
-          Vyhodnotili sme náročnosť aktualizácie komponentov systému, najmä čo by sa muselo prerobiť a aký veľký vplyv by mala aktualizácia komponentu na systém.
-          Následne každý člen dostal prístup do nástroja Trello, v ktorom budeme zaznamenávať úlohy súvisiace s projektom a stanovenými cieľmi.
-          Podobne každý člen získal prístup na testovací server vedúceho projektu.
-          Po diskusii k úlohám z predchádzajúceho stretnutia sme sa postupne presunuli k plánovaniu nových úloh.
-          Prioritou bude aktualizácia jednotlivých komponentov. Taktiež analyzovať zdrojový kód pomocou nástroja SonarQube s cieľom
-          identifikácie zraniteľností a nedostatkov kvality kódu. Na základe výsledkov analýzy budú dodefinované ďalšie úlohy a ciele.
-          Na koniec sme otvorili otázku expirujúceho Docker tokenu, ktorého pôvod a účel je zatiaľ neznámy. Je potrebné preveriť, aký má účel a či jeho expirácia môže ovplyvniť fungovanie systému.
-          Ďalšie stretnutie je naplánované o dva týžne.
-          </p>
-
+        <p>
+          Stretnutie sa začalo o 9:10.
+          Na začiatku sme prebrali vykonané zmeny ako obnovenie článkov, spojazdnenie systému Directus
+         a sprevádzkovanie produkčného servera.
+         Počas sprevádzkovania produkčného servera sme prišli na to,
+          že na serveri sa nachádzali neaktualizované komponenty aplikácie z dôvodu manuálneho spojazdnenia.
+          Kvôli tomu sme vykonali manuálnu aktualizáciu komponentov aplikácie na produkčnom serveri.
+          Aktualizácie prebehli úspešne až na jednu nezrovnalosť.
+          Systém Directus nezobrazoval obrázky. Zistili sme, že predchádzajúca implementácia ukladala obrázky priamo do kontajnera,
+          ktorý bol po aktualizácií znovu vytvorený, čím došlo k ich strate.
+          Požiadali sme vedúceho projektu o asistenciu pri obnovení obrázkov, aby mohli byť znovu nahrané.
+          Následne bola implementácia upravená počas stretnutia tak, aby sa obrázky ukladali do samostatného adresára na serveri, nezávislého od kontajnera.
+          Z cieľov nám zostáva už len finalizácia projektovej dokumentácie, ku ktorej sme dostali komentáre a spätnú väzbu od vedúceho projektu.
         <h3 class="mb-3 text-secondary">Stanovenie úloh</h3>
-
         <ol>
           <li>
-            <p>Aktualizácia verzií jednotlivých komponentov :</p>
-            <ul>
-              <li><p>Laravel</p></li>
-              <li><p>PostgreSQL</p></li>
-              <li><p>Directus</p></li>
-            </ul>
-          </li>
-          <li>
-            <p>Zistiť informácie o expirujúcom Docker tokenu (pôvod, účel, aký následok bude mať jeho expirácia...).</p>
-          </li>
-          <li>
-            <p>Analýza zdrojového kódu cez SonarQube.</p>
+            <p>Dokončiť projektovú dokumentáciu.</p>
           </li>
         </ol>
-
       </div>
     </div>
   </section>

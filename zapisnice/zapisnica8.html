@@ -40,6 +40,7 @@
             <li><a class="dropdown-item" href="zapisnica12.html">Zápisnica 12</a></li>
             <li><a class="dropdown-item" href="zapisnica13.html">Zápisnica 13</a></li>
             <li><a class="dropdown-item" href="zapisnica14.html">Zápisnica 14</a></li>
+            <li><a class="dropdown-item" href="zapisnica15.html">Zápisnica 15</a></li>
           </ul>
         </li>
       </ul>
@@ -67,26 +68,26 @@
           Bc. Tomáš Bunta<br>
           Bc. Ondrej Belan<br>
           Bc. Martin Iró<br>
-          Bc. Adam Varga (neprítomný, zdravotné dôvody)<br>
+          Bc. Adam Varga (neprítomný - zdravotné dôvody)<br>
           Bc. Dominik Velič
         </p>
 
         <h3 class="mb-3 text-secondary">Informácie zo stretnutia</h3>
 
-        <p>Stretnutie sa začalo o 12:00, kde sme prebrali aktuálny stav projektu. Začali sme tým, že väčšina členov tímu už doriešila svoje SonarQube úlohy.
-          Zostáva už len ich synchronizácia, aby sme ich mohli spojiť a spoločne pushnúť do main vetvy.<br>
-          Nakoniec po synchronizácii by sme mohli spraviť push zmien na produkčný server.<br>
+        <p>Stretnutie sa začalo o 12:00, kde sme prebrali aktuálny stav projektu.
+          Začali sme tým, že väčšina členov tímu už doriešila SonarQube úlohy.
+          Zostáva už len ich synchronizácia, aby bolo možné vykonané zmeny spojiť a spoločne pushnúť do hlavnej vetvy.
+          Nakoniec po synchronizácii by sme mohli spraviť nasadenie zmien na testovací, resp. produčkný server, čo detailnejšie preberieme podľa potrieb.
 
-          Čo sa týka pridávania článkov v Directuse, prišli sme na to, že ktuálny prístup je správny a zodpovedá best practices.
-          Nie je potrebné meniť buildovanie stránok na lokálne generovanie, ale ponechať ho cez GitLab CI.
-          Diskutovali sme možnosť pridania Git Workera, ktorý by riešil plánovanie, spúšťanie a CI časť procesov, keďže aktuálne sa stále, napr. na pripojenie na produkčný server, využíva SSH kľúč bývalého člena predošlého tímu.
-          <br>
+          V súvislosti pridávania článkov v systéme Directus sme prišli na to, že aktuálny prístup je správny a zodpovedá osvedčeným postupom.
+          Nie je potrebné meniť zostavovanie stránok na lokálne generovanie, ale ponechať ho prostredníctvom GitLab CI.
+          Diskutovali sme možnosť pridania Git Workera, ktorý by riešil plánovanie, spúšťanie a CI časť procesov, keďže aktuálne sa napríklad na pripojenie na produkčný server využíva SSH kľúč bývalého člena predošlého tímu.
 
-          Ako ďalšie sme sa venovali privátnej časti aplikácie, kde sme si prešli konkrétne zmeny, ktoré treba implementovať.
-          Patria sem zmeny ako náprava light/dark módu, upravenie autocomplete pri dopĺňaní mien schvaľujúceho incidentu,
-          responzivita privátnej časti, pri uzatvorení ticketu incidentu pridať modál, pridať zrušenie schválenia incidentu a vhodne premenovať textové komponenty aplikácie.
+          Ďalej sme sa venovali privátnej časti aplikácie, kde sme si prešli konkrétne zmeny, ktoré by bolo dobré implementovať.
+          Patria sem zmeny ako náprava svetlého a tmavého módu, upravenie automatického dopĺňania mien schvaľujúceho incidentu,
+          responzivita, pridanie modálu pri uzatváraní úlohy, pridanie zrušenia schválenia incidentu a vhodne premenovať textové komponenty aplikácie.
 
-          Na záver sme sa venovali intuitívnosti pridávania, riešenia nahláseného incidentu. Workflow incidentu nie je dostatočne intuitívny, čiže je potrebné
+          Na záver sme sa venovali intuitívnosti pridávania a riešenia nahláseného incidentu. Pracovný postup incidentu nie je dostatočne intuitívny, čiže je potrebné
           prísť s vhodnejším riešením.
           </p>
 
@@ -94,28 +95,28 @@
 
         <ol>
           <li>
-            <p>Synchronizácia členov tímu a následne push na produkčný server.</p>
+            <p>Synchronizácia členov tímu a následne push na testovací server.</p>
           </li>
           <li>
-            <p>Git Worker na riešenie CI časti procesov.</p>
+            <p>Git Worker na riešenie CI časti.</p>
           </li>
           <li>
             <p>Úlohy týkajúce sa privátnej časti aplikácie:</p>
             <ul>
               <li>
-                <p>Prísť s intuitívnejším riešením workflow-u incidentu.</p>
+                <p>Prísť s intuitívnejším riešením pracovného postupu incidentu.</p>
               </li>
               <li>
-                <p>Napraviť light/dark mód.</p>
+                <p>Napraviť svetlý a tmavý mód.</p>
               </li>
               <li>
-                <p>Pridať autocomplete pri dopĺňaní mien.</p>
+                <p>Pridať automatické dopĺňanie mien.</p>
               </li>
               <li>
                 <p>Responzivita.</p>
               </li>
               <li>
-                <p>Modál pri uzatvorení ticketu incidentu.</p>
+                <p>Modál pri uzatvorení úlohy incidentu.</p>
               </li>
               <li>
                 <p>Zrušenie schválenia incidentu.</p>

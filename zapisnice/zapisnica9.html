@@ -40,6 +40,7 @@
             <li><a class="dropdown-item" href="zapisnica12.html">Zápisnica 12</a></li>
             <li><a class="dropdown-item" href="zapisnica13.html">Zápisnica 13</a></li>
             <li><a class="dropdown-item" href="zapisnica14.html">Zápisnica 14</a></li>
+            <li><a class="dropdown-item" href="zapisnica15.html">Zápisnica 15</a></li>
           </ul>
         </li>
       </ul>
@@ -75,17 +76,19 @@
 
         <p>Stretnutie sa začalo o 12:15, kde sme prebrali aktuálny stav projektu a priebeh prác od posledného stretnutia.
           Primárne sme sa venovali synchronizácií medzi členmi tímu a uistili sa, že každý pracuje s aktuálnou novou verziou projektu.
-          Nasledovalo zlúčenie posledných zmien v prostredí Gitlabu.
-          Počas tohto procesu sme narazili na viaceré merge conflictym ktoré sme museli vyriešiť. Pri niektorých prípadoch bolo nutné vykonať dodatočné
-          zmeny, keďže sa odhalili nedostatky pri predošlej implementácií, ktoré sme napravili.<br>
-          Po úspešnej synchronizácií a overení funkčnosti projektu sme narazili na problémy s build a deploy-dev pipeline.
-          Pri build pipeline išlo o nesúlad verzií. Docker prostredie pracovalo s verziou php8.1 pričom projekt už pracuje s
-          verziou php8.5.<br>
-          Tento problém pravdepodobne súvisí s neaktualizovanými závislosťami v composer.json a nevykonaním composer update v Dockerfile-u.
-          Pipeline deploy-dev hlásilo problém so zamietnutím SSH pripojenia na server. Tento problém sme priamo vyriešiť nevedeli, vyžadovalo si to pomoc
-          od Roderika na povolenie pripojenia SSH kľúču(patrí členovi prechádzajúceho tímu), ktorý bol predtým zamietnutý.<br>
-          Po povolení pripojenia sme narazili na už spomínaný build pipeline procesom.<br>
-          Na záver sme sa dohodli, že sa najbližšie zameráme na úlohy privátnej časti projektu a analýzu riešenia pomocou Git Workera, ktoré sme posunuli do ďalšieho stretnutia.
+          Nasledovalo zlúčenie posledných zmien do prostredia Gitlabu.
+          Počas tohto procesu sme narazili na viaceré konflikty pri zlučovaní, ktoré sme museli vyriešiť. Pri niektorých prípadoch bolo nutné vykonať dodatočné
+          zmeny, keďže sa odhalili nedostatky pri predošlej implementácií.
+
+          Po úspešnej synchronizácií a overení funkčnosti projektu sme narazili na problémy v „build“ a „deploy-dev“ pipeline.
+          Pri „build“ pipeline išlo o nesúlad verzií.
+
+          Tento problém pravdepodobne súvisí s neaktualizovanými závislosťami v súbore „composer.json“ a nevykonaním aktualizácie v Dockerfile.
+          Pipeline „deploy-dev“ hlásilo problém so zamietnutím SSH pripojenia na server. Tento problém sme nevedeli vyriešiť priamo, vyžadovalo si to pomoc
+          od vedúceho projektu na povolenie pripojenia SSH kľúču(patrí členovi prechádzajúceho tímu), ktorý bol predtým zamietnutý.
+
+          Po povolení pripojenia sme narazili na už spomínaný „build“ pipeline.<br>
+          Na záver sme sa dohodli, že sa najbližšie zameráme na úlohy privátnej časti projektu a analýzu riešenia pomocou Git Workera, ktoré sme presunuli na ďalšie stretnutie.
         <h3 class="mb-3 text-secondary">Stanovenie úloh</h3>
 
         <ol>
@@ -96,30 +99,7 @@
             <p>Analýza riešenia CI časti projektu pomocou Git Workera.</p>
           </li>
           <li>
-            <p>Úlohy týkajúce sa privátnej časti aplikácie:</p>
-            <ul>
-              <li>
-                <p>Prísť s intuitívnejším riešením workflow-u incidentu.</p>
-              </li>
-              <li>
-                <p>Napraviť light/dark mód.</p>
-              </li>
-              <li>
-                <p>Pridať autocomplete pri dopĺňaní mien.</p>
-              </li>
-              <li>
-                <p>Responzivita.</p>
-              </li>
-              <li>
-                <p>Modál pri uzatvorení ticketu incidentu.</p>
-              </li>
-              <li>
-                <p>Zrušenie schválenia incidentu.</p>
-              </li>
-              <li>
-                <p>Vhodne premenovať textové komponenty.</p>
-              </li>
-            </ul>
+            <p>Dokončiť úlohy týkajúce sa privátnej časti aplikácie.</p>
           </li>
         </ol>
 

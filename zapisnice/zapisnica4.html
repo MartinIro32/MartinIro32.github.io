@@ -40,6 +40,7 @@
             <li><a class="dropdown-item" href="zapisnica12.html">Zápisnica 12</a></li>
             <li><a class="dropdown-item" href="zapisnica13.html">Zápisnica 13</a></li>
             <li><a class="dropdown-item" href="zapisnica14.html">Zápisnica 14</a></li>
+            <li><a class="dropdown-item" href="zapisnica15.html">Zápisnica 15</a></li>
           </ul>
         </li>
       </ul>
@@ -74,22 +75,23 @@
         <h3 class="mb-3 text-secondary">Informácie zo stretnutia</h3>
 
         <p>Stretnutie sa začalo o 12:00, kde každý člen tímu prezentoval výsledky predchádzajúcich úloh.
-          Diskusiu sme otvorili upgrade-om komponentov na testovacom serveri. Upgrade prebehol úspešne.
-          Počas procesu sme identifikovali niekoľko problémov. Niektoré Dockerfile súbory boli nesprávne nakonfigurované.
-          Pri spúšťaní jednotlivých častí projektu to spôsobovalo nežiaduce správanie kontajnerov.
+          Diskusiu sme otvorili aktualizáciou komponentov na testovacom serveri. Aktualizácia prebehla úspešne.
+          Počas procesu sme identifikovali niekoľko problémov. Niektoré Dockerfile súbory boli nesprávne nakonfigurované, čo pri
+          spúšťaní jednotlivých častí projektu spôsobovalo nežiaduce správanie kontajnerov.
 
-          Následne sme kontrolovali databázu a prišli sme na to, že hoci PostgreSQL je funkčná a aktualizovaná, ale neobsahuje žiadne záznamy.
-          Navrhli sme postup s riešením - manuálne spustiť migrácie a obnoviť dáta zo zálohy. Dostupné sú aktuálne záznamy, ale aj záznamy z predošlej verzie PostgreSQL.
+          Následne sme kontrolovali databázu a zistili sme, že hoci PostgreSQL je funkčná a aktualizovaná, ale neobsahuje žiadne záznamy.
+          Dáta boli pred aktualizáciou zálohované a na testovacom serveri sa nenachádzajú dôležité informácie, keďže databáza obsahuje ukážkové údaje.
+          Navrhli sme postup s riešenia spočívajúci v manuálnom spustení migrácií a obnovení dát zo zálohy. Dostupné sú aktuálne záznamy, ale aj záznamy z predošlej verzie PostgreSQL.
 
-          Pri kontrole API sme zistili, že niektoré endpointy sú buď zastaralé, zbytočné alebo neimplementované.
-          Bolo by vhodné vypracovať návrh, ako túto časť refaktorovať.
+          Pri kontrole API sme zistili, že niektoré koncové body sú buď zastarané, zbytočné alebo neimplementované.
+          Do budúcna by bolo vhodné vypracovať návrh, ako túto časť refaktorovať.
 
-          Za významný problém sme považovali pripojenie na backend testovacieho serveru.
-          Toto pripojenie na backend, priamo cez port, zobrazovalo Laravel chybovú hlášku s detailmi, čo je z bezpečnostného hľadiska nežiaduce.
+          Za významný problém sme považovali pripojenie na backend testovacieho servera.
+          Pri priamom pripojení cez port sa zobrazovala chybová hláška frameworku Laravel vrátane informácií o chybe, čo predstavuje bezpečnostné riziko.
           Je potrebné zabezpečiť, aby sa tieto informácie nezobrazovali.
 
-          Na záver sme diskutovali o Docker tokene, jeho obnovením alebo možnej náhrade. Padla otázka, či by token nemohol byť uložený interne (ak sa nevystavuje internetu),
-          aby sme predišli potrebe jeho pravidelnej obnovy. Túto možnosť je potrebné preveriť techinicky aj návrhovo.
+          Na záver sme diskutovali o Docker tokene, jeho obnovení alebo možnej náhrade. Padla otázka, či by token nemohol byť uložený interne (ak sa nevystavuje internetu),
+          aby sme predišli potrebe jeho pravidelnej obnovy. Túto možnosť je potrebné preveriť technicky aj návrhovo.
 
            Najbližšie stretnutie je naplánované opäť o dva týždne, tentokrát ale v stredu namiesto štvrtka.
           </p>
@@ -104,13 +106,13 @@
             <p>Prejsť existujúce Dockerfile súbory a navrhnúť zmeny.</p>
           </li>
           <li>
-            <p>Čistenie API endpointov (analýza, návrh riešenia). </p>
+            <p>Čistenie API endpointov (analýza, návrh riešenia).</p>
           </li>
           <li>
-            <p>Chyba pri prístupe na backend - Laravel (neodhalovať interné údaje). </p>
+            <p>Chyba pri prístupe na backend - Laravel (neodhalovať interné údaje).</p>
           </li>
           <li>
-            <p>Inšpekcia a návrh riešenia pre Docker token (obnova, uloženie). </p>
+            <p>Inšpekcia a návrh riešenia pre Docker token (obnova, uloženie).</p>
           </li>
         </ol>
 

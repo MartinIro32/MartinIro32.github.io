@@ -40,6 +40,7 @@
             <li><a class="dropdown-item" href="zapisnica12.html">Zápisnica 12</a></li>
             <li><a class="dropdown-item" href="zapisnica13.html">Zápisnica 13</a></li>
             <li><a class="dropdown-item" href="zapisnica14.html">Zápisnica 14</a></li>
+            <li><a class="dropdown-item" href="zapisnica15.html">Zápisnica 15</a></li>
           </ul>
         </li>
       </ul>
@@ -75,51 +76,51 @@
 
         <p>Prvé stretnutie v novom roku sa začalo o 12:15, kde sme prebrali aktuálny stav projektu.
           Zamerali sme sa na situáciu pri pushovaní commitov do repozitára v systéme GitLab.
-          Pri commitoch nastala komplikácia, konkrétne s komponentom composer, ktorý spôsobil stav akéhokoľvek commitu "failed".
+          Pri commitoch nastala komplikácia, konkrétne s komponentom Composer, ktorý spôsoboval stav zlyhania pri akomkoľvek commite.
           Následne sme identifikovali aj riešenie, ktoré bude potrebné vykonať na serveri.<br>
 
           Ďalej sme sa venovali úloham zo SonarQube analýzy, ktoré boli už skôr pridelené a rozdelené členom tímu.
-          Išlo o security, maintainability a readability úlohy.<br>
+          Išlo o úlohy udržiavateľnosti, bezpečnosti a čitateľnosti kódu.<br>
 
-          Jednou z dôležitejších tém bola validácia e-mailových adries prostredníctvom regulárnych výrazov.
+          Jednou z dôležitých tém bola validácia e-mailových adries prostredníctvom regulárnych výrazov.
           Diskusia sa sústredila na správny návrh regexu a na to, aby sa validácia neobmedzovala iba na konkrétnu univerzitnú doménu.
-          Rozoberali sme, ako správne navrhovať regex výrazy, prípadne či je vhodnejšie použiť existujúce knižnice namiesto vlastnej implementácie.
+          Rozoberali sme ako správne navrhnúť regex výrazy, prípadne či je vhodnejšie použiť existujúce knižnice namiesto vlastnej implementácie.
           Zároveň sme diskutovali aj o možnosti nastaviť pevné limity na dĺžku e-mailu a kontrolovať povolené rozmedzie.<br>
 
-          Ako ďalšie sa zistilo, že viaceré komponenty bežia pod root používateľom, pričom momentálne nemáme dostatočný prehľad o tom, ktoré služby sú takto spúšťané a kde presne bežia.
-          Dojímame sa, že ide prevažne o Dockerfiles, ale bude potrebné ďalšie preverenie.<br>
+          Ako ďalšie sme zistili, že viaceré komponenty bežia pod koreňovým používateľom, pričom momentálne nemáme dostatočný prehľad o tom, ktoré služby sú takto spúšťané a kde presne bežia.
+          Predpokladáme, že ide prevažne o Dockerfile súbory, ale bude potrebné ďalšie preverenie.<br>
 
-          Predposlednou témou bola CI/CD pipeline procesov. Objavili sa pochybnosti, či je súčasné riešenie správne navrhnuté.
-          Aktuálny proces spočíva v tom, že po vytvorení článku v systéme Directus sa zmeny odošlú do GitLab, kde sa vytvorí Docker image, ten sa nahrá a následne sťahuje na server, kde beží webová aplikácia.
-          Keďže väčšina týchto procesov beží na tom istom serveri, diskutovali sme o možnosti realizovať build proces lokálne, priamo serveri.
-          Dohodli sme sa, že je potrebné vypracovať štúdiu realizovateľnosti, t.j. preveriť, či je možné celý proces presunúť do lokálneho prostredia, aké úpravy by boli potrebné a do akej miery by to zasiahlo do existujúcej architektúry.<br>
+          Predposlednou témou boli CI/CD pipeline procesy. Objavili sa pochybnosti, či je súčasné riešenie správne navrhnuté.
+          Aktuálny proces spočíva v tom, že po vytvorení článku v systéme Directus sa zmeny odošlú do GitLab, kde sa vytvorí Docker image, ten sa nahrá a následne stiahne na server, kde beží webová aplikácia.
+          Keďže väčšina týchto procesov beží na tom istom serveri, diskutovali sme o možnosti realizovať proces lokálne na testovacom serveri.
+          Dohodli sme sa, že je potrebné vypracovať štúdiu realizovateľnosti, t.j. preveriť, či je možné celý proces presunúť do lokálneho prostredia, aké úpravy by boli potrebné a do akej miery by zmeny zasiahli existujúcu architektúru.<br>
 
           Poslednou témou bola privátna časť aplikácie.
-          Rozoberali sme optimalizáciu databázy, spôsob pridávania incidentov a nastavenie workflow procesu, teda či je súčasný model efektívny a udržateľný.
-          Ide o dlhodobejší projekt, najmä v kontexte časti systému, kde sa incidenty nahlasujú a spracúvajú.
-
+          Rozoberali sme optimalizáciu databázy, spôsob pridávania incidentov a nastavenie pracovného postupu procesu, teda či je súčasný model efektívny, udržateľný a intuitívny.
+          Ide o dlhodobejšie ciele, najmä v kontexte časti systému, kde sa incidenty nahlasujú a spracúvajú.
+          Stretnutia v novom roku si budeme plánovať podľa možností a zápisnica bude vyhotovená najneskôr deň pred následujúcim stretnutím.
           </p>
 
         <h3 class="mb-3 text-secondary">Stanovenie úloh</h3>
 
         <ol>
           <li>
-            <p>Composer update na serveri.</p>
+            <p>Aktualizácia Composer.</p>
           </li>
           <li>
-            <p>Pokračovanie v riešení úloh zo SonarQube analýzy.</p>
+            <p>Riešenie úloh zo SonarQube analýzy.</p>
           </li>
           <li>
             <p>Dohodnúť sa na riešení validácie emailových adries.</p>
           </li>
           <li>
-            <p>Prešetriť, ktoré časťi aplikácie, ktoré komponenty bežia pod root používateľom.</p>
+            <p>Prešetriť, ktoré časťi aplikácie bežia pod koreňovým používateľom.</p>
           </li>
           <li>
             <p>Analyzovať CI/CD pipeline projektu.</p>
           </li>
           <li>
-            <p>Hlbší prieskum workflowu privátnej časti, prehľad databázy a pridávania incidentov.</p>
+            <p>Prieskum pracovného postupu privátnej časti, prehľad databázy a pridávania incidentov.</p>
           </li>
         </ol>
 

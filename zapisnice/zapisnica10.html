@@ -40,6 +40,7 @@
             <li><a class="dropdown-item" href="zapisnica12.html">Zápisnica 12</a></li>
             <li><a class="dropdown-item" href="zapisnica13.html">Zápisnica 13</a></li>
             <li><a class="dropdown-item" href="zapisnica14.html">Zápisnica 14</a></li>
+            <li><a class="dropdown-item" href="zapisnica15.html">Zápisnica 15</a></li>
           </ul>
         </li>
       </ul>
@@ -65,7 +66,7 @@
         <p class="mb-3"><strong>Účastníci:</strong><br>
           Ing. Roderik Ploszek, Phd.<br>
           Bc. Martin Iró<br>
-          Bc. Tomáš Bunta (neprítomný - odovzdávanie zadania, práca)<br>
+          Bc. Tomáš Bunta (neprítomný - odovzdávanie zadania)<br>
           Bc. Ondrej Belan (neprítomný - odovzdávanie zadania)<br>
           Bc. Adam Varga (neprítomný - práca)<br>
           Bc. Dominik Velič (neprítomný - odovzdávanie zadania)
@@ -73,23 +74,25 @@
 
         <h3 class="mb-3 text-secondary">Informácie zo stretnutia</h3>
 
-        <p>Stretnutie sa začalo o 12:35. Z dôvodu odovzdávania zadaní na ADS bolo stretnutie kratšie a niektorí členovia tímu sa ho nemohli zúčastniť.
-          Na úvod sme prešli problém s PHP verziami, kde v súbore composer.json bola uvedená verzia php8.5, ale Docker kontajner stále používa verziu php8.2.
-          Nastavili sme si ako dlhodobý cieľ aktualizovať tento Docker kontajner na novú verziu php8.5.<br>
-          Ďalej sme sa pozreli na riešenie workflow-u incidentu a uviedli niektoré krajné prípady, ktoré bude potrebné ošetriť.
-          V rámci implementačných úloh sa podarilo upraviť light/dark mód aplikácie (plán je ho upraviť podľa prostredia Gitlabu),
-          doplniť autocomplete pri zadávaní mien pri incidente, umožniť zadanie tagu a popisu pri vytváraní úlohy, premenovať textové komponenty a umožniť zrušenie schválenia incidentu.<br>
+        <p>Stretnutie sa začalo o 12:35. Z dôvodu odovzdávania zadaní na predmete ADS bolo stretnutie kratšie a niektorí členovia tímu sa ho nemohli zúčastniť.
+          Na úvod sme prešli problém s PHP verziami, kde v súbore composer.json bola uvedená verzia PHP8.5, ale Docker kontajner používa verziu PHP8.2.
+          Nastavili sme si ako dlhodobý cieľ aktualizovať tento Docker kontajner na novú verziu PHP8.5.
+
+          Ďalej sme sa rozoberali pracovný postup nahlasovania incidentu a uviedli niektoré krajné prípady, ktoré bude potrebné ošetriť.
+          V rámci implementačných úloh sa podarilo upraviť svetlý a tmavý mód aplikácie (plán je ho upraviť podľa prostredia Gitlabu),
+          doplniť automatické dopĺňanie mien, umožniť zadanie tagu a popisu pri vytváraní úlohy, premenovať textové komponenty a umožniť zrušenie schválenia incidentu.
           Ako nový cieľ sme si stanovili umožniť vytváranie tagov priamo pri zadávaní úlohy.<br>
-          Nepodarilo sa implementovať modál pri uzatváraní úlohy. Boli testované rôzne prístupy (custom modál aj dialog component), avšak bez funkčného výsledku.<br>
-          Na záver sme prebrali aj deploy-dev pipeline v prostredí Gitlab, ktorý nešiel spustiť s dôvodu zamietnutia pripojenia SSH na server a nenájdením image-u v Gitlab registry.
-          Máme tušenie, že problém bude s docker tokenom, ktorý riadi práve toto pripojenie.
+          Nepodarilo sa implementovať modál pri uzatváraní úlohy. Boli testované rôzne prístupy (vlastný modál aj dialog component), avšak bez funkčného výsledku.
+          Tiež sme si dokončenie modálu stanovili ako ďalší cieľ.
+          Na záver sme prebrali aj „deploy-dev“ pipeline v prostredí Gitlab, ktorý nešiel spustiť s dôvodu zamietnutia pripojenia SSH na server a nenájdením image-u v Gitlab registry.
+          Máme tušenie, že problém bude s Docker tokenom, ktorý riadi práve toto pripojenie.
         <h3 class="mb-3 text-secondary">Stanovenie úloh</h3>
         <ol>
           <li>
             <p>Aktualizovať PHP verziu v Docker kontajneri.</p>
           </li>
           <li>
-            <p>Opraviť deploy-dev pipeline.</p>
+            <p>Opraviť „deploy-dev“ pipeline.</p>
           </li>
           <li>
             <p>Vytváranie tagu priamo pri vytváraní úlohy.</p>

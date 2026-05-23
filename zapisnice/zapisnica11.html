@@ -40,6 +40,7 @@
             <li><a class="dropdown-item" href="zapisnica12.html">Zápisnica 12</a></li>
             <li><a class="dropdown-item" href="zapisnica13.html">Zápisnica 13</a></li>
             <li><a class="dropdown-item" href="zapisnica14.html">Zápisnica 14</a></li>
+            <li><a class="dropdown-item" href="zapisnica15.html">Zápisnica 15</a></li>
           </ul>
         </li>
       </ul>
@@ -73,14 +74,14 @@
 
         <h3 class="mb-3 text-secondary">Informácie zo stretnutia</h3>
 
-        <p>Stretnutie sa začalo o 12:00. Na začiatku sme prediskutovali úlohy z privátnej čast, konkrétne funkcionalitu vytvárania tagov pri vytváraní a editovaní úloh a aj menšie úpravy ako je
-         pridanie tlačidla naspäť v časti aplikácie pre incidenty a úlohy, mazanie úloh, archivovanie incidentov.
-         Hlavnou témou bolo deployovanie a nastavenie Gitlab workera. Riešili sme spôsob pripájania sa a pushovania zmien z prostredia Gitlabu na testovací a produkčný server.
+        <p>Stretnutie sa začalo o 12:00. Na začiatku sme prediskutovali úlohy z privátnej čast, konkrétne funkcionalitu vytvárania tagov pri vytváraní a editovaní úloh a aj menšie úpravy, ako je
+         pridanie tlačidla „Naspäť“ v časti aplikácie pre incidenty a úlohy, mazanie úloh, archivovanie incidentov.
+         Hlavnou témou bolo nasadzovanie a nastavenie Gitlab Workera. Riešili sme spôsob pripájania sa a nasadzovania zmien z prostredia Gitlabu na testovací a produkčný server.
          Aktuálna implementácia používa natvrdo definované heslá a sudo oprávnenia, čo prináša riziko z hľadiska bezpečnosti.
           Navrhli sa zmeny ako odstránenie používania hesiel a pripájanie sa pomocou SSH kľúčov a SSH jump na produkčný server.
-          Týmto sa vyhneme root povoleniam pre používateľa (docker skupina). Medzi návrhý patrí aj obmedzenie sudo príkazov nutných pre nasadenie.
-          Na záver sme sa venovali téme verziovania Docker image-ov. V projekte sa používajú latest verzie, ktorým sa chceme vyhnúť kvôli možným nezrovnalostiam image-ov.
-          Navrhované riešenie pozostáva z priraďovania unikátnych hashov pre každý build, ktorý sa nasadí ako konkrétna verzia namiesto latest.
+          Týmto sa vyhneme zbytočne silným povoleniam pre používateľa (člena docker skupiny). Medzi návrhy patrí aj obmedzenie sudo príkazov nutných pre nasadenie.
+          Na záver sme sa venovali téme verziovania Docker image-ov. V projekte sa používajú verzie s tagom „latest“, ktorým sa chceme vyhnúť kvôli možným nekonzistencií medzi image-ami.
+          Navrhované riešenie pozostáva v priraďovaní unikátnych hashov ku každému zostaveniu projektu, ktorý sa nasadí ako konkrétna verzia namiesto „latest“.
         <h3 class="mb-3 text-secondary">Stanovenie úloh</h3>
         <ol>
           <li>
